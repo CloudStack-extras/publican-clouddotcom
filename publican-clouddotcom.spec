@@ -3,15 +3,15 @@
 Name:		publican-clouddotcom
 Summary:	Common documentation files for %{brand}
 Version:	0.1
-Release:	0%{?dist}
+Release:	1%{?dist}
 License:	SETUP: Set This
 Group:		Applications/Text
 Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 Buildarch:	noarch
-Source:		https://www.SETUP.set.me.example.com/source/%{name}-%{version}.tgz
+Source:		%{name}-%{version}.tgz
 Requires:	publican >= 1.99
 BuildRequires:	publican >= 1.99
-URL:		https://www.SETUP.set.me.example.com
+URL:		https://cloud.com
 
 %description
 This package provides common files and templates needed to build documentation
@@ -21,7 +21,7 @@ for %{brand} with publican.
 %setup -q 
 
 %build
-publican build --formats=xml --langs=all --publish
+publican build --formats=xml --langs=en-US --publish
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -38,6 +38,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/publican/Common_Content/%{brand}
 
 %changelog
-* Sat Feb  5 2011  SETUP:YourName <SETUP:your.email@example.com> 0.1
+* Sat Feb  5 2011  David Nalley <david@gnsa.us> 0.1-1
 - Created Brand
 
