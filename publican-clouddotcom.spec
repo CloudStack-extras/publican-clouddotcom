@@ -4,7 +4,7 @@ Name:		publican-clouddotcom
 Summary:	Common documentation files for %{brand}
 Version:	0.1
 Release:	1%{?dist}
-License:	CC-BY-SA
+License:	SETUP: Set This
 Group:		Applications/Text
 Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 Buildarch:	noarch
@@ -18,7 +18,7 @@ This package provides common files and templates needed to build documentation
 for %{brand} with publican.
 
 %prep
-%setup -qn publican-clouddotcom
+%setup -q 
 
 %build
 publican build --formats=xml --langs=en-US --publish
