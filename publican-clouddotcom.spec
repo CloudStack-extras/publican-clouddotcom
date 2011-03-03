@@ -18,7 +18,7 @@ This package provides common files and templates needed to build documentation
 for %{brand} with publican.
 
 %prep
-%setup -q 
+%setup -qn %{name} 
 
 %build
 publican build --formats=xml --langs=en-US --publish
